@@ -7,11 +7,15 @@ class QuickEitaaApp {
     init() {
         if (this.webApp){
             this.setupEventListener()
-            this.randomNumber1()
-            this.randomNumber2()
+            this.generateRandomNumber()
             this.webApp.ready()
         }
 
+    }
+
+    generateRandomNumber(){
+        this.randomNumber1();
+        this.randomNumber2();
     }
 
     setupEventListener() {
@@ -36,9 +40,9 @@ class QuickEitaaApp {
         let number2 = Number(document.getElementById("randomNumber2").textContent);
         let userResult = Number(document.getElementById("sumValue").value);
         if (userResult === number1 + number2){
-            this.webApp.showAlert("آفرین درست بود.", () => this.init())
+            this.webApp.showAlert("آفرین درست بود.", () => this.generateRandomNumber())
         } else {
-            this.webApp.showAlert("غلط بود.", () => this.init())
+            this.webApp.showAlert("غلط بود.", () => this.generateRandomNumber())
         }
     }
 }
