@@ -1,7 +1,7 @@
 class QuickEitaaApp {
     constructor() {
-        this.webApp = window.Eitaa.WebApp
-        this.init()
+        this.webApp = window.Eitaa.WebApp;
+        this.init();
     }
 
     init() {
@@ -9,6 +9,7 @@ class QuickEitaaApp {
             this.setupEventListener()
             this.randomNumber1()
             this.randomNumber2()
+            this.webApp.ready()
         }
 
     }
