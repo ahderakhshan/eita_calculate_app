@@ -35,9 +35,9 @@ class QuickEitaaApp {
         let number2 = Number(document.getElementById("randomNumber2").textContent);
         let userResult = Number(document.getElementById("sumValue").value);
         if (userResult === number1 + number2){
-            this.webApp.alert("آفرین درست بود.")
+            this.webApp.showAlert("آفرین درست بود.")
         } else {
-            this.webApp.alert("غلط بود.")
+            this.webApp.showAlert("غلط بود.")
         }
     }
 }
